@@ -8,37 +8,59 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tvSpeechInput"
+        android:layout_width="365dp"
+        android:layout_height="333dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
+        android:fontFamily="@font/roboto"
         android:gravity="start|top"
-        android:hint="I'm listening..."
-        android:text=""
         android:inputType="textMultiLine"
         android:lines="6"
         android:maxLines="6"
         android:padding="16sp"
+        android:text="I'm listening..."
+        android:textAlignment="textStart"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton2"
+        android:textStyle="bold"
+        android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+        app:layout_constraintBottom_toTopOf="@+id/tvInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+    <TextView
+        android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="15dp"
+        android:text="Hold to speak"
+        android:textColor="@color/teal_200"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/fbRecordVoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbRecordVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#4FC3F7"
         android:clickable="true"
+        android:focusable="true"
+        android:tint="#8C2929"
+        app:borderWidth="0.8dp"
+        app:fabCustomSize="72dp"
+        app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:maxImageSize="42dp"
+        app:rippleColor="#FFFFFF"
         app:srcCompat="@drawable/ic_voice"
-        android:focusable="true"
-        android:contentDescription="TODO" />
+        android:contentDescription="Release to end" />
 </androidx.constraintlayout.widget.ConstraintLayout>
