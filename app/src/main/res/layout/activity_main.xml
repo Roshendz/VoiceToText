@@ -7,28 +7,50 @@
     android:background="#32343C"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/tvSpeechInput"
-        android:layout_width="365dp"
-        android:layout_height="333dp"
-        android:layout_marginBottom="48dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:lines="6"
-        android:maxLines="6"
-        android:padding="16sp"
-        android:text="I'm listening..."
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/tvInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvSpeechInput"
+            android:layout_width="365dp"
+            android:layout_height="333dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:maxLines="6"
+            android:padding="16dp"
+            android:text="I'm listening..."
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked" />
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvInfo"
